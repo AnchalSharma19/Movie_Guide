@@ -1,4 +1,4 @@
-//Initial References
+
 let movieNameRef = document.getElementById("movie-name");
 let searchBtn = document.getElementById("search-btn");
 let result = document.getElementById("result");
@@ -28,7 +28,6 @@ let getMovie = () => {
                         <h4>${data.imdbRating}</h4>
                     </div>
                     <div class="details">
-                        <span>${data.Rated}</span>
                         <span>${data.Year}</span>
                         <span>${data.Runtime}</span>
                     </div>
@@ -51,7 +50,7 @@ let getMovie = () => {
       })
       //If error occurs
       .catch(() => {
-        result.innerHTML = `<h3 class="msg">Error Occured</h3>`;
+        result.innerHTML = `<h3 class="msg">Sorry! Error Occured</h3>`;
       });
   }
 };
